@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 
 namespace MutexAndOSHandleTest
 {
@@ -16,7 +17,10 @@ namespace MutexAndOSHandleTest
 
         public void Unlock()
         {
-            Interlocked.CompareExchange(ref currentThread, null, Thread.CurrentThread);
+            if (Interlocked.CompareExchange(ref currentThread, null, Thread.CurrentThread) != Thread.CurrentThread)
+            {
+                throw new ApplicationException();
+            }
         }
     }
 }

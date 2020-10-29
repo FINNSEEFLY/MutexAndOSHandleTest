@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Diagnostics;
 
 namespace MutexAndOSHandleTest
 {
@@ -78,7 +79,14 @@ namespace MutexAndOSHandleTest
 
         static void OSHandleTest()
         {
-            Console.WriteLine("OSHandle Test");
+            int handleNumber;
+            Console.WriteLine("Введите номер дескриптора ОС: ");
+            while (!int.TryParse(Console.ReadLine(), out handleNumber))
+                Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС: ");
+            //TODO: Получение дескриптора
+            //Process.GetProcessById(handleNumber);
+            //var osHandle = new OSHandle(new IntPtr(handleNumber));
+            //osHandle.Close();
         }
     }
 }
