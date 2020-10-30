@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace MutexAndOSHandleTest
@@ -10,7 +11,7 @@ namespace MutexAndOSHandleTest
 
         private bool disposed = false;
 
-        public IntPtr Handle { get; }
+        public IntPtr Handle { get; private set; }
 
         public OSHandle(IntPtr handle)
         {
@@ -31,6 +32,7 @@ namespace MutexAndOSHandleTest
         {
             if (disposed || Handle.Equals(IntPtr.Zero)) return;
             CloseHandle(Handle);
+            Handle = IntPtr.Zero;
             disposed = true;
         }
         
@@ -38,5 +40,7 @@ namespace MutexAndOSHandleTest
         {
             Dispose (false);
         }
+        
+        
     }
 }

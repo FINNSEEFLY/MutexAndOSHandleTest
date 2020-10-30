@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using System.Diagnostics;
+using System.Globalization;
 
 namespace MutexAndOSHandleTest
 {
@@ -8,17 +8,18 @@ namespace MutexAndOSHandleTest
     {
         private const int NUM_OF_THREADS = 5;
         private const int MAX_NUMBER = 5;
+
         static void Main(string[] args)
         {
             int answer;
             do
             {
-                Console.WriteLine("________________________________");
-                Console.WriteLine("Какой класс будем тестировать?");
-                Console.WriteLine("1) Mutex");
-                Console.WriteLine("2) OSHandle");
-                Console.WriteLine("0) Выход");
-                Console.WriteLine("________________________________");
+                Console.WriteLine("________________________________" + Environment.NewLine +
+                                  "Какой класс будем тестировать?" + Environment.NewLine +
+                                  "1) Mutex" + Environment.NewLine +
+                                  "2) OSHandle" + Environment.NewLine +
+                                  "0) Выход " + Environment.NewLine +
+                                  "________________________________");
                 answer = ParseAnswer(Console.ReadLine());
                 switch (answer)
                 {
@@ -31,9 +32,9 @@ namespace MutexAndOSHandleTest
                     case 0:
                         return;
                 }
-                answer = -1;
-            } while (answer<1);
 
+                answer = -1;
+            } while (answer < 1);
         }
 
         private static int ParseAnswer(string text)
@@ -74,19 +75,19 @@ namespace MutexAndOSHandleTest
             {
                 Console.WriteLine($"{Thread.CurrentThread.Name}: {i}");
             }
+
             mutex.Unlock();
         }
 
         static void OSHandleTest()
         {
             int handleNumber;
-            Console.WriteLine("Введите номер дескриптора ОС: ");
-            while (!int.TryParse(Console.ReadLine(), out handleNumber))
-                Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС: ");
-            //TODO: Получение дескриптора
-            //Process.GetProcessById(handleNumber);
-            //var osHandle = new OSHandle(new IntPtr(handleNumber));
-            //osHandle.Close();
+            Console.WriteLine("Введите номер дескриптора ОС (формат 1b3): ");
+            while (!int.TryParse(Console.ReadLine(), System.Globalization.NumberStyles.HexNumber,  CultureInfo.InvariantCulture,  out handleNumber))
+                Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС (формат 1b3): ");
+            Console.WriteLine(new IntPtr(handleNumber));
+            var osHandle = new OSHandle(new IntPtr(handleNumber));
+            osHandle.Dispose();
         }
     }
 }

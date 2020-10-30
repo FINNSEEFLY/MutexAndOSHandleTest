@@ -11,7 +11,7 @@ namespace MutexAndOSHandleTest
         {
             while (Interlocked.CompareExchange(ref currentThread,Thread.CurrentThread , null) != null)
             {
-                Thread.Sleep(200);
+                Thread.Yield();
             }
         }
 
