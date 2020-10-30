@@ -1,11 +1,14 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\MutexAndOSHandleTest.csproj",
+    "projectUniqueName": "C:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\MutexAndOSHandleTest.csproj",
     "projectName": "MutexAndOSHandleTest",
-    "projectPath": "D:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\MutexAndOSHandleTest.csproj",
-    "outputPath": "D:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\obj\\",
+    "projectPath": "C:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\MutexAndOSHandleTest.csproj",
+    "outputPath": "C:\\Projects C#\\MutexAndOSHandleTest\\MutexAndOSHandleTest\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
@@ -41,7 +44,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
     }
   }
 }

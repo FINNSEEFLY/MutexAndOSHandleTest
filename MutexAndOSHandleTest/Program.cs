@@ -85,7 +85,6 @@ namespace MutexAndOSHandleTest
             Console.WriteLine("Введите номер дескриптора ОС (формат 1b3): ");
             while (!int.TryParse(Console.ReadLine(), System.Globalization.NumberStyles.HexNumber,  CultureInfo.InvariantCulture,  out handleNumber))
                 Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС (формат 1b3): ");
-            Console.WriteLine(new IntPtr(handleNumber));
             var osHandle = new OSHandle(new IntPtr(handleNumber));
             osHandle.Dispose();
         }

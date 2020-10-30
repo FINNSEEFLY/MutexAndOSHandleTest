@@ -11,3 +11,14 @@ D:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1
 D:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.dll
 D:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.pdb
 D:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.genruntimeconfig.cache
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.exe
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.deps.json
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.runtimeconfig.json
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.runtimeconfig.dev.json
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.dll
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\bin\Debug\netcoreapp3.1\MutexAndOSHandleTest.pdb
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.csprojAssemblyReference.cache
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.AssemblyInfoInputs.cache
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.AssemblyInfo.cs
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.dll
+C:\Projects C#\MutexAndOSHandleTest\MutexAndOSHandleTest\obj\Debug\netcoreapp3.1\MutexAndOSHandleTest.pdb
