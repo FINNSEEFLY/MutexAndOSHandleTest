@@ -18,9 +18,11 @@ namespace MutexAndOSHandleTest
             Handle = handle;
         }
 
-        public void Close()
+        public bool Close()
         {
+            var result = CloseHandle(Handle);
             Dispose();
+            return result;
         }
         public void Dispose()
         {

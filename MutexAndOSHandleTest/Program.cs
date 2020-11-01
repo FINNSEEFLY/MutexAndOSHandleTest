@@ -11,7 +11,6 @@ namespace MutexAndOSHandleTest
 
         static void Main(string[] args)
         {
-            int answer;
             do
             {
                 Console.WriteLine("________________________________" + Environment.NewLine +
@@ -20,7 +19,7 @@ namespace MutexAndOSHandleTest
                                   "2) OSHandle" + Environment.NewLine +
                                   "0) Выход " + Environment.NewLine +
                                   "________________________________");
-                answer = ParseAnswer(Console.ReadLine());
+                var answer = ParseAnswer(Console.ReadLine());
                 switch (answer)
                 {
                     case 1:
@@ -32,16 +31,14 @@ namespace MutexAndOSHandleTest
                     case 0:
                         return;
                 }
-
-                answer = -1;
-            } while (answer < 1);
+            } while (true);
         }
 
         private static int ParseAnswer(string text)
         {
             try
             {
-                return Int32.Parse(text.Trim());
+                return int.Parse(text.Trim());
             }
             catch
             {
@@ -83,9 +80,13 @@ namespace MutexAndOSHandleTest
         {
             int handleNumber;
             Console.WriteLine("Введите номер дескриптора ОС (формат 1b3): ");
-            while (!int.TryParse(Console.ReadLine(), System.Globalization.NumberStyles.HexNumber,  CultureInfo.InvariantCulture,  out handleNumber))
+            while (!int.TryParse(Console.ReadLine(), NumberStyles.HexNumber,  CultureInfo.InvariantCulture,  out handleNumber))
                 Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС (формат 1b3): ");
             var osHandle = new OSHandle(new IntPtr(handleNumber));
+            if (osHandle.Close())
+                Console.WriteLine("Дескриптор удалось закрыть");
+            else
+                Console.WriteLine("Дескриптор не удалось закрыть");
             osHandle.Dispose();
         }
     }
