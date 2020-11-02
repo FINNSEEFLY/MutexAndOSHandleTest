@@ -80,13 +80,11 @@ namespace MutexAndOSHandleTest
         {
             int handleNumber;
             Console.WriteLine("Введите номер дескриптора ОС (формат 1b3): ");
-            while (!int.TryParse(Console.ReadLine(), NumberStyles.HexNumber,  CultureInfo.InvariantCulture,  out handleNumber))
+            while (!int.TryParse(Console.ReadLine(), NumberStyles.HexNumber, CultureInfo.InvariantCulture,
+                out handleNumber))
                 Console.WriteLine("Ошибка ввода, введите номер дескриптора ОС (формат 1b3): ");
             var osHandle = new OSHandle(new IntPtr(handleNumber));
-            if (osHandle.Close())
-                Console.WriteLine("Дескриптор удалось закрыть");
-            else
-                Console.WriteLine("Дескриптор не удалось закрыть");
+            Console.WriteLine(osHandle.Close() ? "Дескриптор удалось закрыть" : "Дескриптор не удалось закрыть");
             osHandle.Dispose();
         }
     }
